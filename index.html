@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clínica Saludable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <h1>Clínica Saludable</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registro.html">Registrar Paciente</a></li>
+                <li><a href="registro_ayuda.html">Registrar Ayuda</a></li> 
+                <li><a href="registro_cita.html">Registrar Cita</a></li> <!-- Corregido el enlace -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="accordion">Pacientes Registrados</button>
+            <div class="panel" id="pacientes-list" style="display: none;"></div>
+
+            <button class="accordion">Usuarios Registrados</button>
+            <div class="panel" id="usuarios-list" style="display: none;"></div>
+        </aside>
+
+        <main>
+            <section id="inicio" class="section-intro">
+                <h2>Bienvenido a Clínica Saludable</h2>
+                <p>Nos comprometemos a brindar atención médica de la más alta calidad, con el objetivo de cuidar de ti y de tu familia.</p>
+                <a href="#servicios" class="btn-primary">Conoce nuestros servicios</a>
+                <img src="https://www.diariomedico.pe/wp-content/uploads/2024/03/000210097W-777x437.jpg" alt="Imagen de bienvenida a la clínica" class="imagen-principal">
+            </section>
+
+            <section id="sobre-nosotros" class="section-about">
+                <h2>Sobre Nosotros</h2>
+                <p>Con más de 20 años de experiencia, somos una institución médica comprometida con la salud y el bienestar de nuestros pacientes.</p>
+                <img src="https://www.diariomedico.pe/wp-content/uploads/2024/03/standard_907879-inversiones-sabogal-1.png" alt="Imagen de nuestra clínica" class="imagen-secundaria">
+            </section>
+
+            <section id="servicios" class="section-services">
+                <h2>Nuestros Servicios</h2>
+                <ul>
+                    <li>Consultas médicas generales</li>
+                    <li>Exámenes de laboratorio</li>
+                    <li>Especialidades médicas</li>
+                    <li>Urgencias 24/7</li>
+                </ul>
+                <img src="https://portal.andina.pe/EDPfotografia3/Thumbnail/2021/12/21/000833609W.jpg" alt="Imagen de los servicios médicos" class="imagen-secundaria">
+            </section>
+
+            <section id="contacto" class="section-contact">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para ayudarte. Contáctanos a través de nuestro teléfono o correo electrónico:</p>
+                <p><strong>Teléfono:</strong> +51 123 456 789</p>
+                <p><strong>Email:</strong> contacto@clinicasaludable.com</p>
+                <img src="https://cdn.www.gob.pe/uploads/document/file/5590828/886191-servicio-de-neonatologia-del-hospital-sabogal-celebra-su-37-aniversario-atendiendo-180-partos-al-mes_01.jpg" alt="Imagen de contacto de la clínica" class="imagen-secundaria">
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Clínica Saludable. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Chat Box -->
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <h3>Ayuda en Línea</h3>
+            <button class="minimize-btn" onclick="minimizarChat()">_</button>
+            <button class="close-btn" onclick="cerrarChat()">X</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Los mensajes del chat aparecerán aquí -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userMessage" placeholder="Escribe tu mensaje...">
+            <button onclick="enviarMensaje()">Enviar</button>
+            <button onclick="limpiarChat()">Limpiar Chat</button>
+        </div>
+    </div>
+
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

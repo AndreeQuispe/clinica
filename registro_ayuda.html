@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ayuda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Ayuda al Paciente</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Detalles de la Ayuda</h2>
+            <table id="tabla-ayuda">
+                <thead>
+                    <tr>
+                        <th>Síntomas</th>
+                        <th>Descripción de la Ayuda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas se agregarán dinámicamente aquí -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        // Función para cargar los datos desde la URL y mostrarlos
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            const sintomas = urlParams.get('sintomas') || 'No hay síntomas';
+            const descripcionAyuda = urlParams.get('descripcionAyuda') || 'No se ha proporcionado descripción';
+
+            // Obtener la tabla y su cuerpo (tbody)
+            const tablaAyuda = document.getElementById('tabla-ayuda').getElementsByTagName('tbody')[0];
+
+            // Crear una nueva fila
+            const nuevaFila = document.createElement('tr');
+
+            // Crear las celdas para los síntomas y la descripción
+            const celdaSintomas = document.createElement('td');
+            celdaSintomas.textContent = sintomas;
+
+            const celdaDescripcion = document.createElement('td');
+            celdaDescripcion.textContent = descripcionAyuda;
+
+            // Agregar las celdas a la nueva fila
+            nuevaFila.appendChild(celdaSintomas);
+            nuevaFila.appendChild(celdaDescripcion);
+
+            // Agregar la nueva fila a la tabla (tbody)
+            tablaAyuda.appendChild(nuevaFila);
+        });
+    </script>
+</body>
+</html>

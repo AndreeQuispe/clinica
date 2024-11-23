@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda al Paciente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ayuda al Paciente</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Asistencia para el Paciente</h2>
+            <div id="info-paciente"></div>
+
+            <section>
+                <h2>Agregar Síntoma</h2>
+                <input type="text" id="nuevoSintoma" placeholder="Ingresa un nuevo síntoma">
+                <button onclick="agregarSintoma()">Agregar Síntoma</button>
+            </section>
+
+            <div id="sintomas">
+                <h3>Selecciona los síntomas:</h3>
+            </div>
+
+            <section>
+                <h2>Descripción de la Ayuda Necesaria</h2>
+                <textarea id="descripcionAyuda" placeholder="Describe la ayuda que necesita el paciente" rows="4" style="width: 100%;"></textarea>
+            </section>
+            
+            <button onclick="enviarAyuda()">Enviar Ayuda</button>
+        </section>
+    </main>
+
+    <!-- Incluir el archivo JavaScript al final -->
+    <script src="script.js"></script>
+</body>
+</html>

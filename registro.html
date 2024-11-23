@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Paciente - Clínica Saludable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Registro de Paciente</h2>
+        <form id="registroForm" onsubmit="return registrarPaciente();">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+            
+            <label for="diagnostico">Diagnóstico:</label>
+            <input type="text" id="diagnostico" name="diagnostico" required>
+            
+            <button type="submit" class="btn">Registrar Paciente</button>
+            <button type="button" class="btn" onclick="location.href='index.html'">Volver al Inicio</button>
+            <p id="success-message" style="color:green; display:none;">Paciente registrado con éxito!</p>
+        </form>
+    </div>
+
+    <div class="pacientes-list-container">
+        <h2>Pacientes Registrados</h2>
+        <div id="pacientes-list"></div> <!-- Lista de pacientes se llenará aquí -->
+    </div>
+
+    <script src="registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Citas Médicas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Citas Médicas</h1>
+    </header>
+
+    <main>
+        <!-- Formulario para registrar una cita -->
+        <form id="form-citas">
+            <div>
+                <label for="nombre">Nombre del Paciente</label>
+                <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
+            </div>
+            <div>
+                <label for="fecha">Fecha de la Cita</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div>
+                <label for="hora">Hora de la Cita</label>
+                <input type="time" id="hora" required>
+            </div>
+            <div>
+                <label for="doctor">Doctor Asignado</label>
+                <select id="doctor" required>
+                    <option value="">Seleccione un doctor</option>
+                    <option value="Dr. García">Dr. García</option>
+                    <option value="Dra. López">Dra. López</option>
+                    <option value="Dr. Pérez">Dr. Pérez</option>
+                </select>
+            </div>
+            <button type="submit">Registrar Cita</button>
+        </form>
+
+        <!-- Tabla para mostrar las citas registradas -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Paciente</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Doctor</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-citas">
+                <!-- Las filas se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
